@@ -1,0 +1,99 @@
+@import "./common/breakpoints.scss";
+@import "./common/colors.scss";
+@import "./common/fonts.scss";
+@import "./common/mixins.scss";
+
+
+* {
+  margin: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vmax;
+  background-color: $color-secondary;
+  font-family: $font-primary;
+  padding: 0.5rem;
+  
+  &.binary-search {
+    background-color: $ocean-green;
+    color: $castleton-green;
+  }
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: $color-secondary;
+  z-index: -1;
+}
+
+h1 {
+  margin: 1rem 2.5rem 0.75rem 0;
+  font-size: 2.1875rem;
+  @include respond-to ($breakpoint-small) {
+    margin: 0 1rem 0.5rem 0;
+  }
+}
+h2 {
+  margin: .75rem 1.5rem .25rem 0;
+  font-size: 1.5rem;
+  @include respond-to ($breakpoint-small) {
+    margin: 0 1rem 0.25rem 0;
+  }
+}
+h4 {
+  font-size: inherit;
+  color: $color-quaternary;
+}
+p {
+  margin: 0.5rem 0 0.25rem 0;
+  font-size: inherit;
+}
+      
+img {
+  max-width: 50%;
+  margin: 0.5rem 0;
+
+  @include respond-to ($breakpoint-large) {
+    padding-bottom: 00.25rem;
+  }
+  @include respond-to ($breakpoint-small) {
+    padding-bottom: 0;
+  }
+}
+  
+.form {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  font-size: 1rem;
+  .field {
+    
+    label {
+      display: block;
+      margin: 0 0 .28571429rem 0;
+      color: rgba(0,0,0,.87);
+      font-size: .92857143em;
+      font-weight: 700;
+      text-transform: none;
+    }
+    input {
+      width: 100%;
+      padding: .59375rem .875rem;
+      border: $border-dark;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.content {
+  display: block;
+}
