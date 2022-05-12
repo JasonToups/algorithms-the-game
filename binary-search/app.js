@@ -34,7 +34,11 @@ function closestNumber (num, array) {
     index++;
   }
 
-  return array[winningIndex];
+  if (winningIndex === -1) {
+    return -1
+  } else {
+    return array[winningIndex];
+  }
 };
 
 var prize = 9;
@@ -47,4 +51,8 @@ console.log(closestNumber(prize, bidsArray));
 
 var prize = 31;
 var bidsArray = [32, 2, 7, 100, 11, 15, 59, 89];
+console.log(closestNumber(prize, bidsArray));
+
+var prize = 16;
+var bidsArray = [32, 22, 17, 1, 71, 65, 59, 89];
 console.log(closestNumber(prize, bidsArray));
