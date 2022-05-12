@@ -20,6 +20,11 @@ Output:
 - number - closest number to the prize value
 */
 
+/* 
+TODO 
+- setup brute force solution
+- setup binary search solution
+*/
 
 function closestNumber (num, array) {
   let index = 0;
