@@ -79,6 +79,10 @@ This will improve runtime by a factor of O(log n).
 function closestNumber (num, array) {
   let winningIndex = -1;
   let difference = num;
+
+  console.log(`The Prize is valued at ${num}`);
+  console.log(`The bids are: ${array}`);
+
   // we need to sort the array to use binary search
   array = array.sort((a, b) => a - b);
   
@@ -97,7 +101,7 @@ function closestNumber (num, array) {
     let mid = Math.floor((start + end) / 2);
 
     if (array[mid] === num) {
-      return array[mid];
+      return `The winning bid is ${array[mid]}`;
     } else if (array[mid] < num) {
       if ((num - array[mid]) <= difference && (num - array[mid]) >= 0) {
         difference = (num - array[mid]);
@@ -112,7 +116,7 @@ function closestNumber (num, array) {
   if (winningIndex === -1) {
     return -1
   } else {
-    return array[winningIndex];
+    return (`The winning bid is ${array[winningIndex]}`);
   }
 };
 
