@@ -5,6 +5,17 @@ How could they be, when you turn them into a game?
 
 Let's approach studying algorithms as a fun game with puzzles to stimulate your brain and inspire creativity.
 
+## What is this???
+Algorithms: The Game is a collection of coding challenges in Javascript with a playful game-based context for each of the algorithms. 
+
+For engineers who host technical interviews, this provides greater context to the live-coding session for the applicant. When an algorithm is presented as a game, it's more fun and can ease the stress of live coding with a stranger. Plus, if you build the challenge off of commonly understood games, the rules have already been established and the applicant's understanding of the exercise is enhanced.
+
+Providing some pre-written code will give the applicant a head-start, and allow them to put the pieces together for what's being asked. Detailing the data types of the inputs & outputs helps out considerably. Providing some sample inputs and invoking the main function with the input argument saves time, and helps the applicant understand the challenge by seeing what's being passed into the function.
+
+When conducting an interview in this way, you can observe the way the applicant is tackling the challenge, rather than providing the applicant little more than some instruction and then wasting time clarifying the details of the challenge, and establishing the terms of the algorithm.
+
+Technical Interviews are a necessary part of the software developer career journey, and is only one aspect of being a great engineer. Many great engineers buckle under the social pressure of a technical interview, and they can be passed up, when maybe live coding with a stranger isn't their comfortable space to shine.
+
 ## Social Links
 Connect with me on these platforms:
 - [LinkedIn](https://www.linkedin.com/in/jasontoups/) - where I get social
