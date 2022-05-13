@@ -1,4 +1,4 @@
-![algorithms the game logo](./design/algorithms-the-game-logo.svg)
+![algorithms the game logo](./public/algorithms-the-game-logo.svg)
 Do you think algorithms are boring???
 
 How could they be, when you turn them into a game?
