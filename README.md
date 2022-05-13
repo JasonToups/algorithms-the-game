@@ -18,7 +18,7 @@ The details of the challenge are built onto the page, so the applicant doesn't h
 
 ## Why was this built?
 
-This project was written & built to help both technical interviewers & applicants perform better in their roles. It's a way to help inspire & guide engineering applicants as they apply for roles. And to help technical interviewers present their challenges in a way that's easier to understand for the applicant and provides a bit more personality than simply asking the applicant to return the correct answer. 
+This project was written & built to help both technical interviewers & applicants perform better in their roles. It's a way to help inspire & guide engineering applicants as they apply for jobs. And to help technical interviewers present their challenges in a way that's easier to understand for the applicant and provides a bit more personality than simply asking the applicant to return the correct answer. 
 
 ### Technical Interviewers
 
