@@ -96,7 +96,7 @@ For the **mid calculation**, we are using `Math.floor()` to *round down to a who
 
 Otherwise, without this Math operation, we would be evaluating numbers with decimal points for the mid index in the array, after start & end are added together and divided in half.
 
-#### Controlling the 3 Pointers
+### Controlling the 3 Pointers
 
   Three things need to happen here to handle the `start`, `mid` & `end` pointers:
   1. We need to check if the `mid` index value is equal to the price of the prize.
