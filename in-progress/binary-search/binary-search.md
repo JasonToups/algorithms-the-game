@@ -34,7 +34,6 @@ You may encounter an array of numbers during a techincal interview. This is a go
 
 > Go for the power move, tackle the Binary Search
 
-TODO - pickup editing the article from here to the end
 
 Here are our inputs and the function invocation.
 ```javascript
@@ -45,6 +44,63 @@ console.log(closestNumber(prize, bidsArray));
 
 Here is the [Codepen for Binary Search: The Price I$ Right](https://codepen.io/JasonToups/pen/YzepqGQ) to follow along in code.
 
+
+
+## Writing a Binary Search - 1 Step at a Time
+
+Here's the initial scaffold of the function:
+
+```javascript
+function closestNumber (num, array) {
+  let winningIndex = -1;
+  let difference = num;
+  
+  return array[winningIndex];
+};
+
+var prize = 16;
+var bidsArray = [32, 22, 17, 1, 5, 71, 65, 59, 89];
+console.log(closestNumber(prize, bidsArray));
+```
+
+### Sorting Your Array of Numbers
+To implement a binary search here, you need to have a sorted array of numbers.
+
+You can do this 1 of 2 ways.
+
+You can create an in-line sort function using the sort method like this:
+
+`array = array.sort((a, b) => a - b);`
+
+Or you can create a new Float64Array from the array passed in as an argument to the function, and then sort the new array.
+
+```javascript
+var sortedArray = new Float64Array(array);
+sortedArray = sortedArray.sort();
+```
+
+Creating a new array will use more memory, but it's easier to remember this procedure than it is to remember the in-line sort function.
+
+Since we are concerned about memory usage here, we are going to use the sort array function.
+
+### Three Pointer Approach
+
+Now to write the Binary Search, we need 3 pointers to accomplish this:
+1. start - `0` // beginning of the arry
+2. end - `array.length - 1` // end of the array
+3. mid - `Math.floor((start + end) / 2);` // mid point between start & end
+
+In the array, we need to establish a start point as a set of numbers, and an end point of that set. 
+
+The mid is going to be the mid point between the start & end, which will be the array index that will be avaluated for every cycle of our loop.
+
+We are using `Math.floor()` to round down to a whole integer. 
+
+Otherwise, without this Math operation, we would be evaluating numbers with decimal points for the mid index in the array, after start & end are added together and divided in half.
+
+
+
+TODO - pickup editing the article from here to the end
 ```javascript
 function closestNumber (num, array) {
   let winningIndex = -1;
