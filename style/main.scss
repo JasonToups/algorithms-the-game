@@ -3,7 +3,6 @@
 @import "./common/fonts.scss";
 @import "./common/mixins.scss";
 
-
 * {
   margin: 0;
   -webkit-box-sizing: inherit;
@@ -60,11 +59,13 @@ p {
 img {
   max-width: 50%;
   margin: 0.5rem 0;
-
+  
   @include respond-to ($breakpoint-large) {
+    max-width: 75%;
     padding-bottom: 00.25rem;
   }
   @include respond-to ($breakpoint-small) {
+    max-width: 100%;
     padding-bottom: 0;
   }
 }

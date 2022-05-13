@@ -69,12 +69,14 @@ img {
 
 @media (max-width: 62.5rem) {
   img {
+    max-width: 75%;
     padding-bottom: 00.25rem;
   }
 }
 
 @media (max-width: 43.75rem) {
   img {
+    max-width: 100%;
     padding-bottom: 0;
   }
 }

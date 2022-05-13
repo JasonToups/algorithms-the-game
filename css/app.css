@@ -17,8 +17,8 @@ body {
 }
 
 body.binary-search {
-  background-color: #65c99cff;
-  color: #00321C;
+  background-color: #a4e2c6;
+  color: #03542fff;
 }
 
 .background {
@@ -70,12 +70,14 @@ img {
 
 @media (max-width: 62.5rem) {
   img {
+    max-width: 75%;
     padding-bottom: 00.25rem;
   }
 }
 
 @media (max-width: 43.75rem) {
   img {
+    max-width: 100%;
     padding-bottom: 0;
   }
 }
