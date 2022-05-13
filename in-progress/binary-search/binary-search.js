@@ -72,6 +72,9 @@ This will improve runtime by a factor of O(log n).
 */
 function closestNumber (num, array) {
   let winningIndex = -1;
+
+  // TODO I'm curious to see if we can remove the difference variable and just use the return value of the binary search.
+  // Would it be possible for start and end to be the same number?
   let difference = num;
 
   // we need to sort the array to use binary search
