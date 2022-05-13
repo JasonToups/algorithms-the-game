@@ -34,14 +34,6 @@ You may encounter an array of numbers during a techincal interview. This is a go
 
 > Go for the power move, tackle the Binary Search
 
-
-Here are our inputs and the function invocation.
-```javascript
-var prize = 16;
-var bidsArray = [32, 22, 17, 1, 5, 71, 65, 59, 89];
-console.log(closestNumber(prize, bidsArray));
-```
-
 Here is the [Codepen for Binary Search: The Price I$ Right](https://codepen.io/JasonToups/pen/YzepqGQ) to follow along in code.
 
 
@@ -54,8 +46,14 @@ Here's the initial scaffold of the function:
 function closestNumber (num, array) {
   let winningIndex = -1;
   let difference = num;
+
+  // Binary Search goes here
   
-  return array[winningIndex];
+  if (winningIndex === -1) {
+    return -1
+  } else {
+    return (`The winning bid is ${array[winningIndex]}`);
+  }
 };
 
 var prize = 16;
@@ -86,13 +84,13 @@ Since we are concerned about memory usage here, we are going to use the sort arr
 ### Three Pointer Approach
 
 Now to write the Binary Search, we need 3 pointers to accomplish this:
-1. start - `0` // beginning of the arry
-2. end - `array.length - 1` // end of the array
-3. mid - `Math.floor((start + end) / 2);` // mid point between start & end
+1. **start** - `0` // beginning of the arry
+2. **end** - `array.length - 1` // end of the array
+3. **mid** - `Math.floor((start + end) / 2);` // mid point between start & end
 
-In the array, we need to establish a start point as a set of numbers, and an end point of that set. 
+In the array, we need to establish a *start point* as a set of numbers, and an *end point* of that set. 
 
-The mid is going to be the mid point between the start & end, which will be the array index that will be avaluated for every cycle of our loop.
+The mid is going to be the *mid point* between the start & end, which will be the array index that will be avaluated for every cycle of our loop.
 
 We are using `Math.floor()` to round down to a whole integer. 
 
