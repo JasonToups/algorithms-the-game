@@ -80,8 +80,6 @@ function closestNumber (num, array) {
   let winningIndex = -1;
   let difference = num;
 
-  // console.log(`The bids are: ${array}`);
-
   // we need to sort the array to use binary search
   array = array.sort((a, b) => a - b);
   
