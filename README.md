@@ -34,7 +34,7 @@ Technical Interviews are a necessary part of the software developer career journ
 
 Use these challenges to help inspire you to do the hard work of drilling algorithms. It can be exhausting to prioritize solving algorithms over every other responsibility in your day.
 
-But if you approach them as a game, with puzzles to sole, the technical challenges become more fun. It's all a matter of context & perspective.
+But if you approach them as a game, with puzzles to solve, the technical challenges become more fun. It's all a matter of context & perspective.
 
 Fork & clone this repo down & spin it up in your Integrated Development Environment & pick a challenge to solve yourself. Maybe duplicate the folder for a challenge & remove the working parts of the functions to solve them yourself.
 
