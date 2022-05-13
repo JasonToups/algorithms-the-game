@@ -20,12 +20,6 @@ Output:
 - number - closest number to the prize value
 */
 
-/* 
-TODO 
-- setup brute force solution
-- setup binary search solution
-*/
-
 /* Initial Setup
 This would be a good function scaffold to use for your interviews, giving the candidates a place to start that's easy to understand and work with.
 
@@ -78,6 +72,7 @@ This will improve runtime by a factor of O(log n).
 */
 function closestNumber (num, array) {
   let winningIndex = -1;
+  // TODO - do we need to track the difference when using binary search? I think we would naturally find the number that is less than or equal to the prize value.
   let difference = num;
 
   // we need to sort the array to use binary search
