@@ -98,9 +98,9 @@ Otherwise, without this Math operation, we would be evaluating numbers with deci
 
 #### Controlling the 3 Pointers
 
-  Three things need to happen here to handle the start & end pointers:
+  Three things need to happen here to handle the `start`, `mid` & `end` pointers:
   1. We need to check if the `mid` index value is equal to the price of the prize.
-     1. If this is **true**, then `return` the `mid` index value in the array.
+     1. If this is **true**, then **return** the `mid` index value in the array.
   2. If the `mid` index value is **less than** the price, then we need to set `start` to the `mid + 1`. --> **Reducing** the set of numbers *from the middle to the end value*.
      1. If this is **true**, then we need to check if the **difference** between the `price` and the `mid` value is less than the `difference` variable, but *also larger than or equal to 0*.
         1. If this is **true**, set the new `difference` value.
