@@ -21,7 +21,7 @@ After cloning this repo locally, the challenges are placed into folders that can
 
 Articles based off of the challenges are written in Markdown to then be published on different platforms, explaining the algorithm & runtime.
 
-The [GitHub Pages Site](https://jasontoups.github.io/algorithms-the-game/) is a place that connects all of the pages for each challenge. It's a bare-bones site and not the primary focus of this project. 
+The [GitHub Pages Site](https://jasontoups.github.io/algorithms-the-game/) is a place that connects all of the pages for each challenge. It's a bare-bones site and not the primary focus of this project. But the html for each of the pages could be used by interviewers to present the coding challenge with the instructions clearly communicated on the page.
 
 The details of the challenge are built onto the page, so the applicant doesn't have to scroll up and down a single .js file to read more of the details of the challenge.
 
