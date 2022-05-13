@@ -43,6 +43,8 @@ var bidsArray = [32, 22, 17, 1, 5, 71, 65, 59, 89];
 console.log(closestNumber(prize, bidsArray));
 ```
 
+Here is the [Codepen for Binary Search: The Price I$ Right](https://codepen.io/JasonToups/pen/YzepqGQ) to follow along in code.
+
 ```javascript
 function closestNumber (num, array) {
   let winningIndex = -1;
