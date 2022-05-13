@@ -109,16 +109,16 @@ Otherwise, without this Math operation, we would be evaluating numbers with deci
   
 ```javascript
 if (array[mid] === num) {
-      return `The winning bid is ${array[mid]}`;
-    } else if (array[mid] < num) {
-      if ((num - array[mid]) <= difference && (num - array[mid]) >= 0) {
-        difference = (num - array[mid]);
-        winningIndex = mid;
-      } 
-      start = mid + 1;
-    } else {
-      end = mid - 1;
-    }
+  return `The winning bid is ${array[mid]}`;
+} else if (array[mid] < num) {
+  if ((num - array[mid]) <= difference && (num - array[mid]) >= 0) {
+    difference = (num - array[mid]);
+    winningIndex = mid;
+  } 
+  start = mid + 1;
+} else {
+  end = mid - 1;
+}
 ```
 
 
