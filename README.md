@@ -9,10 +9,10 @@ Let's approach studying algorithms as a fun game with puzzles to stimulate your 
 - [Why was this built?](#why-was-this-built)
   - [Technical Interviewers](#technical-interviewers)
   - [Applicants](#applicants)
-- [Social Links](#social-links)
 - [Developer Resources](#developer-resources)
   - [VS Code Plugins](#vs-code-plugins)
   - [Terminal Plugins & Apps](#terminal-plugins--apps)
+- [Social Links](#social-links)
 
 ## What is this???
 Algorithms: The Game is a collection of coding challenges in Javascript with a playful game-based context for each of the algorithms.
@@ -47,13 +47,6 @@ But if you approach them as a game, with puzzles to solve, the technical challen
 
 Fork & clone this repo down & spin it up in your Integrated Development Environment & pick a challenge to solve yourself. Maybe duplicate the folder for a challenge & remove the working parts of the functions to solve them yourself.
 
-## Social Links
-Connect with me on these platforms:
-- [LinkedIn](https://www.linkedin.com/in/jasontoups/) - where I get social
-- [Dev.to](https://dev.to/jasontoups) - where I write about algorithms
-- [CodePen](https://codepen.io/JasonToups) - where I host my algos, so you can play with them
-- [StackOverflow](https://stackoverflow.com/users/4761122/jason-toups) - where I stand on the shoulders of giants
-
 ## Developer Resources
 ### VS Code Plugins
 
@@ -70,3 +63,10 @@ Connect with me on these platforms:
 | [oh my zsh](https://ohmyz.sh/) | invaluable tool for theming your terminal |
 | [spaceship theme](https://github.com/spaceship-prompt/spaceship-prompt) | My favorite oh my zsh theme for my terminal.<br><br> It shows your git status with an icon, the current folder you are inside, the node version of that folder, and the git branch you are pointing to. |
 | [iTerm2](https://iterm2.com/) | Upgrade your default MacOS Terminal app, for free. |
+
+## Social Links
+Connect with me on these platforms:
+- [LinkedIn](https://www.linkedin.com/in/jasontoups/) - where I get social
+- [Dev.to](https://dev.to/jasontoups) - where I write about algorithms
+- [CodePen](https://codepen.io/JasonToups) - where I host my algos, so you can play with them
+- [StackOverflow](https://stackoverflow.com/users/4761122/jason-toups) - where I stand on the shoulders of giants
