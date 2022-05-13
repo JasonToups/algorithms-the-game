@@ -5,10 +5,12 @@ This can be an awkward situation for both parties. Anything you can do to help c
 ## Contestants Row
 
 ![come on down](./images/price-is-right-come-on-down.gif)
+
 For our technical challenge today, we are going to pretend that we are in Contestants Row on The Price I$ Right, and we are bidding on a fabulous prize.
 
 ### Goals
 ![contestants row](./images/contestants-row.jpg)
+
 You must find the **number** in the array of numbers that is *closest to the prize value*, without going over.
 
 If all of the bids are *over the prize value*, return -1.
@@ -29,6 +31,7 @@ You may encounter an array of numbers during a techincal interview. This is a go
 - If the array **can be sorted**, then you can jump right into the binary search approach, leaving more time to complete it. A brute-force linear approach may be more simple to complete, but chances are, you will be asked to improve the runtime of your function. So dive into the binary search.
 
 ![power move](./images/contestant-amazed-1-dollar.gif)
+
 > Go for the power move, tackle the Binary Search
 
 TODO - pickup editing the article from here to the end
