@@ -96,6 +96,18 @@ We are using `Math.floor()` to round down to a whole integer.
 
 Otherwise, without this Math operation, we would be evaluating numbers with decimal points for the mid index in the array, after start & end are added together and divided in half.
 
+#### Controlling the 3 Pointers
+
+  Three things need to happen here to handle the start & end pointers:
+  1. We need to check if the `mid` index value is equal to the price of the prize.
+     1. If this is **true**, then `return` the `mid` index value in the array.
+  2. If the `mid` index value is **less than** the price, then we need to set `start` to the `mid + 1`. --> **Reducing** the set of numbers *from the middle to the end value*.
+     1. If this is **true**, then we need to check if the **difference** between the `price` and the `mid` value is less than the `difference` variable, but *also larger than or equal to 0*.
+        1. If this is **true**, set the new `difference` value.
+        2. And set the `winningIndex` to `mid`.
+  3. If the `mid` index value is **more than** the price, then we need to set `end` to `mid - 1`. --> **Reducing** the set of numbers *from the start value to the mid value*.
+  
+
 
 
 TODO - pickup editing the article from here to the end
