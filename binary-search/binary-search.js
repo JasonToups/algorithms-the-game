@@ -80,25 +80,28 @@ function closestNumber (num, array) {
   let winningIndex = -1;
   let difference = num;
 
-  console.log(`The Prize is valued at ${num}`);
-  console.log(`The bids are: ${array}`);
+  // console.log(`The bids are: ${array}`);
 
   // we need to sort the array to use binary search
   array = array.sort((a, b) => a - b);
   
-  // we need a 2 pointer approach to track the start & end conditions.
+  // we need a 3 pointer approach to track the start & end indexes, along with the middle of them, which will be set during each while loop.
   let start = 0;
   let end = array.length - 1;
+  // Use Math.floor() to round down to the nearest whole number.
+  let mid = Math.floor((start + end) / 2);
 
-  // Three things need to happen here:
-  // We need to check if the middle index is the winning index.
-  // If it is, then return the winning index.
-  // If it is less than the winning index, then we need to set the index to half of the index & the length of the array.
-  // If it is more than the winning index, then we need to set the index to half of the index.
+  // Three things need to happen here to handle the start & end pointers:
+  // 1. We need to check if the mid index is the price of the prize.
+  // If this is tru, then return the mid index.
+  // 2. If the mid value is less than the price, then we need to set the start to the mid + 1.
+  // If this is true, then we need to check if the difference between the price and the mid value is less than the difference variable, but also larger than or equal to 0.
+  // Set the new difference value.
+  // Set the winningIndex to mid.
+  // 3. If it is more than the winning index, then we need to set the end to the mid - 1.
   while (start<=end) {
     // To perform the binary search, we need to find the middle index of the array, for every cycle of the loop.
-    // Use Math.floor() to round down to the nearest whole number.
-    let mid = Math.floor((start + end) / 2);
+    mid = Math.floor((start + end) / 2);
 
     if (array[mid] === num) {
       return `The winning bid is ${array[mid]}`;
@@ -130,8 +133,12 @@ console.log(closestNumber(prize, bidsArray));
 
 var prize = 31;
 var bidsArray = [32, 2, 7, 100, 11, 15, 59, 89];
-console.log(closestNumber(prize, bidsArray));
+console.log(closestNumber(prize, bidsArray)); 
 
 var prize = 16;
 var bidsArray = [32, 22, 17, 1, 71, 65, 59, 89];
+console.log(closestNumber(prize, bidsArray));
+
+var prize = 16;
+var bidsArray = [32, 22, 17, 1, 5, 71, 65, 59, 89];
 console.log(closestNumber(prize, bidsArray));
