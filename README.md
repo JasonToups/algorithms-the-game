@@ -5,6 +5,15 @@ How could they be, when you turn them into a game?
 
 Let's approach studying algorithms as a fun game with puzzles to stimulate your brain and inspire creativity.
 
+- [What is this???](#what-is-this)
+- [Why was this built?](#why-was-this-built)
+  - [Technical Interviewers](#technical-interviewers)
+  - [Applicants](#applicants)
+- [Social Links](#social-links)
+- [Developer Resources](#developer-resources)
+  - [VS Code Plugins](#vs-code-plugins)
+  - [Terminal Plugins & Apps](#terminal-plugins--apps)
+
 ## What is this???
 Algorithms: The Game is a collection of coding challenges in Javascript with a playful game-based context for each of the algorithms.
 
