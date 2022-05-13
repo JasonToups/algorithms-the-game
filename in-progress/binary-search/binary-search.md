@@ -70,7 +70,7 @@ You can create an in-line sort function using the sort method like this:
 
 `array = array.sort((a, b) => a - b);`
 
-Or you can create a new Float64Array from the array passed in as an argument to the function, and then sort the new array.
+Or you can create a `new Float64Array` from the array passed in as an argument to the function, and then sort the new array.
 
 ```javascript
 var sortedArray = new Float64Array(array);
@@ -88,11 +88,11 @@ Now to write the Binary Search, we need 3 pointers to accomplish this:
 2. **end** - `array.length - 1` // end of the array
 3. **mid** - `Math.floor((start + end) / 2);` // mid point between start & end
 
-In the array, we need to establish a *start point* as a set of numbers, and an *end point* of that set. 
+In the array, we need to establish a `start` *point* as a set of numbers, and an `end` *point* of that set. 
 
-The mid is going to be the *mid point* between the start & end, which will be the array index that will be avaluated for every cycle of our loop.
+`mid` is going to be the *mid point* between the `start` & `end`, which will be the array index that will be *evaluated for every cycle of our loop*.
 
-We are using `Math.floor()` to round down to a whole integer. 
+For the **mid calculation**, we are using `Math.floor()` to *round down to a whole integer*. 
 
 Otherwise, without this Math operation, we would be evaluating numbers with decimal points for the mid index in the array, after start & end are added together and divided in half.
 
@@ -107,7 +107,19 @@ Otherwise, without this Math operation, we would be evaluating numbers with deci
         2. And set the `winningIndex` to `mid`.
   3. If the `mid` index value is **more than** the price, then we need to set `end` to `mid - 1`. --> **Reducing** the set of numbers *from the start value to the mid value*.
   
-
+```javascript
+if (array[mid] === num) {
+      return `The winning bid is ${array[mid]}`;
+    } else if (array[mid] < num) {
+      if ((num - array[mid]) <= difference && (num - array[mid]) >= 0) {
+        difference = (num - array[mid]);
+        winningIndex = mid;
+      } 
+      start = mid + 1;
+    } else {
+      end = mid - 1;
+    }
+```
 
 
 TODO - pickup editing the article from here to the end
