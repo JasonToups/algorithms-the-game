@@ -72,7 +72,6 @@ This will improve runtime by a factor of O(log n).
 */
 function closestNumber (num, array) {
   let winningIndex = -1;
-  // TODO - do we need to track the difference when using binary search? I think we would naturally find the number that is less than or equal to the prize value.
   let difference = num;
 
   // we need to sort the array to use binary search
@@ -118,6 +117,10 @@ function closestNumber (num, array) {
 
 var prize = 9;
 var bidsArray = [2, 7, 11, 15];
+console.log(closestNumber(prize, bidsArray));
+
+var prize = 6;
+var bidsArray = [21, 7, 11, 15];
 console.log(closestNumber(prize, bidsArray));
 
 var prize = 11;
