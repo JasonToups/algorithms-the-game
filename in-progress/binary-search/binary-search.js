@@ -8,7 +8,7 @@ Drew Carey is about to ask you to bid on the prize.
 Goal:
 You must find the number in the array of numbers that is closest to the prize value, without going over.
 
-If all of the bids are over the prize value, return -1
+If all of the bids are over the prize value, return the string: "All bids are over the prize value."
 */
 
 /* 
@@ -24,24 +24,12 @@ Output:
 This would be a good function scaffold to use for your interviews, giving the candidates a place to start that's easy to understand and work with.
 
 function closestNumber (num, array) {
-  let index = 0;
-  let winningIndex = -1;
 
-  while (index < array.length) {
-    index++;
-  }
-
-  if (winningIndex === -1) {
-    return -1
-  } else {
-    return array[winningIndex];
-  }
 };
 */
 
 /* Brute Force Solution:
 For an initial brute force solution, we can simply loop through the array and compare each number to the prize value.
-The runtime of this is O(n).
 
 function closestNumber (num, array) {
   let index = 0;
@@ -58,25 +46,23 @@ function closestNumber (num, array) {
   }
   
   if (winningIndex === -1) {
-    return -1
+    return "All bids are over the prize value."
   } else {
     return array[winningIndex];
   }
 };
+
+The runtime of this is linear approach is O(n).
+But we can do better.
 */
+
 /* Binary Search Solution:
-For a binary search solution, we can use a binary search to find the closest number to the prize value.
+For a binary search solution, we can use a binary search to find the closest number to the prize value. The binary search will check the value of the middle index, and depending on the value of the middle index, we can either set the start or end pointer to the middle index.
 
 This will improve runtime by a factor of O(log n).
-
 */
+
 function closestNumber (num, array) {
-  let winningIndex = -1;
-
-  // TODO I'm curious to see if we can remove the difference variable and just use the return value of the binary search.
-  // Would it be possible for start and end to be the same number?
-  let difference = num;
-
   // we need to sort the array to use binary search
   array = array.sort((a, b) => a - b);
   
@@ -88,33 +74,36 @@ function closestNumber (num, array) {
 
   // Three things need to happen here to handle the start & end pointers:
   // 1. We need to check if the mid index is the price of the prize.
-  // If this is tru, then return the mid index.
-  // 2. If the mid value is less than the price, then we need to set the start to the mid + 1.
-  // If this is true, then we need to check if the difference between the price and the mid value is less than the difference variable, but also larger than or equal to 0.
-  // Set the new difference value.
-  // Set the winningIndex to mid.
-  // 3. If it is more than the winning index, then we need to set the end to the mid - 1.
+  // If this is true, then return the mid index.
+  // 2. If the mid value is less than the price, then we need to set the start to the mid.
+  // 3. If the mid value is more than the price, then we need to set the end to the mid.
+
+  // Once the pointers are working, then we need to handle returning the winning bid.
+  // When the start and end pointers are equal, which is the end condition for the while loop, check if the mid value is less than the prize value.
+  // If it is, then return the mid value.
+  // If it is not, then return "All bids are over the prize value.".
   while (start<=end) {
-    // To perform the binary search, we need to find the middle index of the array, for every cycle of the loop.
+    // To perform the binary search, we need to find the middle index of the array, for every cycle of the loop. 
     mid = Math.floor((start + end) / 2);
 
     if (array[mid] === num) {
       return `The winning bid is ${array[mid]}`;
-    } else if (array[mid] < num) {
-      if ((num - array[mid]) <= difference && (num - array[mid]) >= 0) {
-        difference = (num - array[mid]);
-        winningIndex = mid;
-      } 
-      start = mid + 1;
-    } else {
-      end = mid - 1;
-    }
-  }
 
-  if (winningIndex === -1) {
-    return -1
-  } else {
-    return (`The winning bid is ${array[winningIndex]}`);
+    // If the start and end pointers are the same, we need to check if the mid value is less than the prize value.
+    } else if (start === end ) {
+      if (array[mid] < num) {
+        return `The winning bid is ${array[mid]}`;
+      } else {
+        return "All bids are over the prize value.";
+      }
+    } else if (array[mid] < num) {
+      if (array[mid + 1] > num) {
+        return `The winning bid is ${array[mid]}`;
+      }
+      start = mid;
+    } else {
+      end = mid;
+    }
   }
 };
 
