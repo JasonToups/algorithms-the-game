@@ -26,6 +26,9 @@ This would be a good function scaffold to use for your interviews, giving the ca
 function closestNumber (num, array) {
 
 };
+var prize = 9;
+var bidsArray = [2, 7, 11, 15];
+console.log(closestNumber(prize, bidsArray));
 */
 
 /* Brute Force Solution:
