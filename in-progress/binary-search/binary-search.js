@@ -115,7 +115,7 @@ function closestNumber (num, array) {
   }
 };
 
-var prize = 9;
+/* var prize = 9;
 var bidsArray = [2, 7, 11, 15];
 console.log(closestNumber(prize, bidsArray));
 
@@ -133,8 +133,53 @@ console.log(closestNumber(prize, bidsArray));
 
 var prize = 16;
 var bidsArray = [32, 22, 17, 1, 71, 65, 59, 89];
-console.log(closestNumber(prize, bidsArray));
+console.log(closestNumber(prize, bidsArray)); */
 
 var prize = 16;
 var bidsArray = [32, 22, 17, 1, 5, 71, 65, 59, 89];
 console.log(closestNumber(prize, bidsArray));
+
+// P5 Sketch
+let arrayLength = bidsArray.length;
+
+let canvasWidth = 700;
+let canvasHeight = 200;
+let canvasTop = 1955;
+let backgroundColor = '#a4e2c6';
+
+let indexSeparatorWidth = 10;
+let indexSeparatorHeight = 50;
+let indexWidth = (canvasWidth - indexSeparatorWidth)/ (arrayLength);
+let indexSeparatorColor = '#03542fff';
+
+function setupArray(array) {
+  let index = 0;
+  
+  noStroke()
+  fill(indexSeparatorColor);
+  
+  while (index <= array.length) {
+    if (index < array.length) {
+      let div = createDiv(`${array[index]}`);
+      div.parent('sketch-text');
+      div.style('font-size', '16px', 'text-align', 'center');
+      div.position(((index + 1) * indexWidth) - (indexWidth / 2) + (indexSeparatorWidth / 2), (canvasHeight/2 - (indexSeparatorHeight / 2) + canvasTop));
+    }
+    rect((indexWidth * index), canvasHeight/2 - indexSeparatorHeight + (indexSeparatorWidth/2), indexSeparatorWidth, indexSeparatorHeight, indexSeparatorWidth);
+    
+    index++  
+  }
+  rect(0, canvasHeight/2, canvasWidth, indexSeparatorWidth);
+}
+
+function setup() {
+  let canvas = createCanvas(canvasWidth, canvasHeight);
+  canvas.parent('sketch-holder');
+  canvas.id('sketch--binary-search')
+  background(backgroundColor);
+  setupArray(bidsArray);
+}
+
+function draw() {
+ 
+}
