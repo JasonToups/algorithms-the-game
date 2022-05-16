@@ -108,9 +108,9 @@ function closestNumber (num, array) {
       if (array[mid + 1] > num) {
         return `The winning bid is ${array[mid]}`;
       }
-      start = mid;
+      start = mid + 1;
     } else {
-      end = mid;
+      end = mid - 1;
     }
   }
 };
