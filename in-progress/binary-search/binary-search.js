@@ -29,10 +29,15 @@ function closestNumber (num, array) {
 var prize = 9;
 var bidsArray = [2, 7, 11, 15];
 console.log(closestNumber(prize, bidsArray));
+
+Or, if you would like to give them more numbers to work with, it might help with visualizing the binary search technique:
+var prize = 31;
+var bidsArray = [32, 2, 7, 100, 11, 15, 59, 89];
+console.log(closestNumber(prize, bidsArray)); 
 */
 
 /* Brute Force Solution:
-For an initial brute force solution, we can simply loop through the array and compare each number to the prize value.
+For an initial brute force solution, we can simply loop through the array and compare each number to the prize value, and then return the number that is closest to the prize value.
 
 function closestNumber (num, array) {
   let index = 0;
@@ -60,7 +65,7 @@ But we can do better.
 */
 
 /* Binary Search Solution:
-For a binary search solution, we can use a binary search to find the closest number to the prize value. The binary search will check the value of the middle index, and depending on the value of the middle index, we can either set the start or end pointer to the middle index.
+For a binary search solution, we will check the value of the middle index, and and if it is less than the prize value, we can set the start pointer to the middle index. If it is more than the prize value, we can set the end pointer to the middle index.
 
 This will improve runtime by a factor of O(log n).
 */
