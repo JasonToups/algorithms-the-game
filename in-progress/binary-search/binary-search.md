@@ -102,11 +102,25 @@ Otherwise, without this Math operation, we would be evaluating numbers with deci
   1. We need to check if the `mid` index value is equal to the price of the prize.
      1. If this is **true**, then **return** the `mid` index value in the array.
   2. If the `mid` index value is **less than** the price, then we need to set `start` to the `mid + 1`. --> **Reducing** the set of numbers *from the middle to the end value*.
-     1. If this is **true**, then we need to check if the **difference** between the `price` and the `mid` value is less than the `difference` variable, but *also larger than or equal to 0*.
-        1. If this is **true**, set the new `difference` value.
-        2. And set the `winningIndex` to `mid`.
   3. If the `mid` index value is **more than** the price, then we need to set `end` to `mid - 1`. --> **Reducing** the set of numbers *from the start value to the mid value*.
   
+```javascript
+if (array[mid] === num) {
+  return `The winning bid is ${array[mid]}`;
+} else if (array[mid] < num) {
+  start = mid + 1;
+} else {
+  end = mid - 1;
+}
+```
+
+### Handling the Difference for our Return
+Now that we have the 3 pointers doing what they need to do, let's handle updating the difference & winningIndex variables, which help with the return value.
+
+1. When the `mid` index value is **less than** the price, we need to check if the **difference** between the `price` and the `mid` value is less than the `difference` variable, but *also larger than or equal to 0*.
+   1. If this is **true**, set the new `difference` value.
+   2. And set the `winningIndex` to `mid`.
+
 ```javascript
 if (array[mid] === num) {
   return `The winning bid is ${array[mid]}`;
@@ -121,8 +135,10 @@ if (array[mid] === num) {
 }
 ```
 
-
 TODO - pickup editing the article from here to the end
+
+[Link to Binary Search Animation](https://editor.p5js.org/JasonToups/sketches/ltjU85pm1)
+
 ```javascript
 function closestNumber (num, array) {
   let winningIndex = -1;
