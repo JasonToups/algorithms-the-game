@@ -157,11 +157,17 @@ function setupArray(array) {
   
   noStroke()
   fill(indexSeparatorColor);
+  textAlign(CENTER, CENTER);
   
   while (index <= array.length) {
     if (index < array.length) {
+      if (index === 0) {
+        textSize(25);
+        text('start',((index + 1) * indexWidth) - (indexWidth / 2) + (indexSeparatorWidth / 2), (canvasHeight / 3 - (indexSeparatorHeight / 2)) + 5);
+      } else if (index === array.length - 1) {
+        text('end',((index + 1) * indexWidth) - (indexWidth / 2) + (indexSeparatorWidth / 2), (canvasHeight / 3 - (indexSeparatorHeight / 2)) + 5);
+      }
       textSize(27);
-      textAlign(CENTER, CENTER);
       text(`${array[index]}`,((index + 1) * indexWidth) - (indexWidth / 2) + (indexSeparatorWidth / 2), (canvasHeight/2 - (indexSeparatorHeight / 2)) + 5);
     }
     rect((indexWidth * index), canvasHeight/2 - indexSeparatorHeight + (indexSeparatorWidth/2), indexSeparatorWidth, indexSeparatorHeight, indexSeparatorWidth);
@@ -176,9 +182,8 @@ function setup() {
   canvas.parent('sketch-holder');
   canvas.id('sketch--binary-search')
   background(backgroundColor);
-  setupArray(bidsArray);
 }
 
 function draw() {
- 
+  setupArray(bidsArray);
 }
