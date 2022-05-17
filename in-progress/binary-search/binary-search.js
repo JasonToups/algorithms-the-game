@@ -139,6 +139,8 @@ var prize = 16;
 var bidsArray = [32, 22, 17, 1, 5, 71, 65, 59, 89];
 console.log(closestNumber(prize, bidsArray));
 
+
+// TODO remove the p5 Sketch function, and work on it in the p5 editor
 // P5 Sketch
 let arrayLength = bidsArray.length;
 
