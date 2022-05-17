@@ -114,21 +114,35 @@ if (array[mid] === num) {
 }
 ```
 
-### Handling the Difference for our Return
-Now that we have the 3 pointers doing what they need to do, let's handle updating the difference & winningIndex variables, which help with the return value.
+<!-- TODO update this section to reflect the new logic to return the winning value -->
+### When Start & End Meets
+Now that we have the 3 pointers doing what they need to do, let's handle the successful return of a winning bid & the condition where there are no winning bids.
 
-1. When the `mid` index value is **less than** the price, we need to check if the **difference** between the `price` and the `mid` value is less than the `difference` variable, but *also larger than or equal to 0*.
-   1. If this is **true**, set the new `difference` value.
-   2. And set the `winningIndex` to `mid`.
+The final loop of the while loop happens when the start & end pointers meet, so let's handle this condition, which would determine if a winning bid was made, or not.
 
 ```javascript
 if (array[mid] === num) {
   return `The winning bid is ${array[mid]}`;
+
+// If the start and end pointers are the same value, we need to check if the mid value is less than the prize value.
+} else if (start === end ) {
+  if (array[mid] < num) {
+    return `The winning bid is ${array[mid]}`;
+  } else {
+    return "All bids are over the prize value.";
+  }
+}
+```
+
+### If Mid finds the Winning Bid
+The while loop can return the winning bid anytime the current Mid value is less than the Prize Price, and the next value is more than the Price Price.
+
+```javascript
 } else if (array[mid] < num) {
-  if ((num - array[mid]) <= difference && (num - array[mid]) >= 0) {
-    difference = (num - array[mid]);
-    winningIndex = mid;
-  } 
+  // This catches the winning bid, if the next bid goes over the price of the prize.
+  if (array[mid + 1] > num) {
+    return `The winning bid is ${array[mid]}`;
+  }
   start = mid + 1;
 } else {
   end = mid - 1;
@@ -153,35 +167,29 @@ function closestNumber (num, array) {
   // Use Math.floor() to round down to the nearest whole number.
   let mid = Math.floor((start + end) / 2);
 
-  // Three things need to happen here to handle the start & end pointers:
-  // 1. We need to check if the mid index is the price of the prize.
-  // If this is tru, then return the mid index.
-  // 2. If the mid value is less than the price, then we need to set the start to the mid + 1.
-  // If this is true, then we need to check if the difference between the price and the mid value is less than the difference variable, but also larger than or equal to 0.
-  // Set the new difference value.
-  // Set the winningIndex to mid.
-  // 3. If it is more than the winning index, then we need to set the end to the mid - 1.
   while (start<=end) {
-    // To perform the binary search, we need to find the middle index of the array, for every cycle of the loop.
+    // To perform the binary search, we need to find the middle index of the array, for every cycle of the loop. 
     mid = Math.floor((start + end) / 2);
 
     if (array[mid] === num) {
       return `The winning bid is ${array[mid]}`;
+
+    // If the start and end pointers are the same value, we need to check if the mid value is less than the prize value.
+    } else if (start === end ) {
+      if (array[mid] < num) {
+        return `The winning bid is ${array[mid]}`;
+      } else {
+        return "All bids are over the prize value.";
+      }
     } else if (array[mid] < num) {
-      if ((num - array[mid]) <= difference && (num - array[mid]) >= 0) {
-        difference = (num - array[mid]);
-        winningIndex = mid;
-      } 
+      // This catches the winning bid, if the next bid goes over the price of the prize.
+      if (array[mid + 1] > num) {
+        return `The winning bid is ${array[mid]}`;
+      }
       start = mid + 1;
     } else {
       end = mid - 1;
     }
-  }
-
-  if (winningIndex === -1) {
-    return -1
-  } else {
-    return (`The winning bid is ${array[winningIndex]}`);
   }
 };
 ```
