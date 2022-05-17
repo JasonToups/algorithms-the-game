@@ -142,9 +142,9 @@ console.log(closestNumber(prize, bidsArray));
 // P5 Sketch
 let arrayLength = bidsArray.length;
 
-let canvasWidth = 700;
+let canvasWidth = 550;
 let canvasHeight = 200;
-let canvasTop = 1955;
+let canvasTop = 1855;
 let backgroundColor = '#a4e2c6';
 
 let indexSeparatorWidth = 10;
@@ -160,10 +160,9 @@ function setupArray(array) {
   
   while (index <= array.length) {
     if (index < array.length) {
-      let div = createDiv(`${array[index]}`);
-      div.parent('sketch-text');
-      div.style('font-size', '16px', 'text-align', 'center');
-      div.position(((index + 1) * indexWidth) - (indexWidth / 2) + (indexSeparatorWidth / 2), (canvasHeight/2 - (indexSeparatorHeight / 2) + canvasTop));
+      textSize(27);
+      textAlign(CENTER, CENTER);
+      text(`${array[index]}`,((index + 1) * indexWidth) - (indexWidth / 2) + (indexSeparatorWidth / 2), (canvasHeight/2 - (indexSeparatorHeight / 2)) + 5);
     }
     rect((indexWidth * index), canvasHeight/2 - indexSeparatorHeight + (indexSeparatorWidth/2), indexSeparatorWidth, indexSeparatorHeight, indexSeparatorWidth);
     
