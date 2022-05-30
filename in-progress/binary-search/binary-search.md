@@ -84,6 +84,7 @@ Since we are concerned about memory usage here, we are going to use the sort arr
 ### Three Pointer Approach
 
 Now to write the Binary Search, we need 3 pointers to accomplish this:
+
 1. **start** - `0` // beginning of the arry
 2. **end** - `array.length - 1` // end of the array
 3. **mid** - `Math.floor((start + end) / 2);` // mid point between start & end
@@ -99,6 +100,7 @@ Otherwise, without this Math operation, we would be evaluating numbers with deci
 ### Controlling the 3 Pointers
 
   Three things need to happen here to handle the `start`, `mid` & `end` pointers:
+  
   1. We need to check if the `mid` index value is equal to the price of the prize.
      1. If this is **true**, then **return** the `mid` index value in the array.
   2. If the `mid` index value is **less than** the price, then we need to set `start` to the `mid + 1`. --> **Reducing** the set of numbers *from the middle to the end value*.
